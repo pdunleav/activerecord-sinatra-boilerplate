@@ -1,0 +1,11 @@
+<h1>Welcome to my Sinatra Restaurant app!</h1>
+
+<p>Current Time: <%= Time.now %></p>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="/restaurants/<%= restaurant.id%>"><%= restaurant.name %></a> - <%= restaurant.city %>
+    </li>
+  <% end %>
+</ul>
